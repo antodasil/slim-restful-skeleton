@@ -11,7 +11,7 @@ Install via [Composer](http://getcomposer.org)
 $ composer create-project adasilva/slim-restful-skeleton [my-app-name]
 ```
 
-This will install Slim restful and all required dependencies (Including slim framework). Slim restful requires PHP 7.4 or newer.
+This will create a new project from slim-restful-skeleton for PHP 7.4 or newer.
 
 ## Authors
 
