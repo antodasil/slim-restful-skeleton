@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da026b488fb6d27c08e873c610336027",
+    "content-hash": "26134dc29de1f05c4d9a9f80a8563468",
     "packages": [
         {
             "name": "adasilva/slim-restful",
-            "version": "dev-master",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/antodasil/slim-restful.git",
+                "reference": "b201eeef57077b2c532eb3072637d006bb6a2d4c"
+            },
             "dist": {
-                "type": "path",
-                "url": "../slim-restful",
-                "reference": "6ef8ed7deb716ad7fc2d83a95c28c2ee88fe143b"
+                "type": "zip",
+                "url": "https://api.github.com/repos/antodasil/slim-restful/zipball/b201eeef57077b2c532eb3072637d006bb6a2d4c",
+                "reference": "b201eeef57077b2c532eb3072637d006bb6a2d4c",
+                "shasum": ""
             },
             "require": {
                 "minime/annotations": "~3.0",
@@ -27,10 +33,12 @@
                     "SlimRestful\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "description": "Extension of Slim framework for REST APIs."
+            "description": "Extension of Slim framework for REST APIs.",
+            "time": "2020-05-20T11:24:14+00:00"
         },
         {
             "name": "fig/http-message-util",
@@ -1150,9 +1158,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "adasilva/slim-restful": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
