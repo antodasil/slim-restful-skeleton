@@ -1,25 +1,24 @@
 <?php
 
-use Slim\Factory\AppFactory;
-use DI\ContainerBuilder;
-use SlimRestful\SlimLoader;
+use SlimRestful\RestAppFactory;
+use SlimRestful\SettingsManager;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$containerBuilder = new ContainerBuilder();
-$loader = SlimLoader::getInstance();
-
 //Load settings
-$loader->loadSettings($containerBuilder, __DIR__ . '/../config/config.json');
-$container = $containerBuilder->build();
+$settingsManager = SettingsManager::getInstance();
+$settingsManager->load(__DIR__ . '/../config/config.ini');
+
+//Get container
+$container = $settingsManager->getContainer();
 
 //Instanciate app
-AppFactory::setContainer($container);
-$app = AppFactory::create();
+RestAppFactory::setContainer($container);
+$app = RestAppFactory::create();
 
 //Load middlewares and routes
-$loader->loadMiddlewares($app)
-    ->loadRoutes($app, __DIR__ . '/../src/routes/routes.json');
+$app->addSlimMiddlewares()
+    ->loadRoutes(__DIR__ . '/../src/routes/routes.json');
 
 //Run app
 $app->run();

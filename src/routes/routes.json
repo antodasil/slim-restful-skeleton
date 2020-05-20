@@ -2,13 +2,14 @@
     "middlewares": {
         "namespace": "Routes\\",
         "list": [
-            { "middleware": "TestMiddleware", "annotation": "test" }
+            { "middleware": "ExampleMiddleware", "annotation": "test" }
         ]
     },
+
     "routes" : {
         "namespace": "Controllers\\",
         "list": [
-            { "name": "hello",   "pattern": "/hello",   "controller": "HelloController" }
+            { "name": "hello", "pattern": "/hello", "controller": "HelloController" }
         ]
     }
 }

@@ -2,7 +2,6 @@
 
 namespace Controllers;
 
-use DateTime;
 use SlimRestful\BaseController;
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
@@ -18,7 +17,7 @@ class HelloController extends BaseController {
      */
     public function get(Request $request, Response $response, array $args): Response {
 
-        $response->getBody()->write('Hello world!');
+        $response->getBody()->write('<h1>Hello world!</h1>');
         return $response->withStatus(self::GET_SUCCESS_STATUS);
     }
 

@@ -2,8 +2,14 @@
     "name": "adasilva/slim-restful-skeleton",
     "description": "Skeleton for slim app with slim-restful",
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../slim-restful"
+        }
+    ],
     "require": {
-        "adasilva/slim-restful": "^v1.0-beta"
+        "adasilva/slim-restful": "@dev"
     },
     "autoload": {
         "psr-4": {

@@ -3,7 +3,7 @@
 
 <routing>
     <middlewares namespace="Routes\">
-        <add middleware="TestMiddleware" annotation="test" />
+        <add middleware="ExampleMiddleware" annotation="test" />
     </middlewares>
 
     <routes namespace="Controllers\">

@@ -1,18 +1,27 @@
 
 {
-    "environment": "development",
-    "application": "Slim-restful Skeleton",
+    "application": {
+        "environment": "development",
+        "name": "Slim-restful Skeleton"
+    },
 
-    "JWTAlgo": "RS512",
-    "secretKey": "randomlyGeneratedString",
-    "privateKeyPath": "/config/privateKey.pem",
-    "publicKeyPath": "/config/publicKey.pem",
+    "containerSettings": {
+        "determineRouteBeforeAppMiddleware": true
+    },
 
-    "driver": "pdo_pgsql",
-    "host": "127.0.0.1",
-    "port": "5432",
-    "database": "MyDatabase",
-    "username": "postgres",
-    "password": "password1234",
-    "charset" : "utf-8"
+    "JWT": {
+        "algorithm": "RS512",
+        "secretKey": "randomlyGeneratedString"
+    },
+
+    "database": {
+        "driver": "pdo_pgsql",
+        "host": "127.0.0.1",
+        "port": "5432",
+        "database": "MyDatabase",
+        "username": "postgres",
+        "password": "password1234",
+        "charset" : "utf-8"
+    }
+
 }
